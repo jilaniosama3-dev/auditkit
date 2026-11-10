@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "auditkit"
+version = "0.1.0"
+description = "Small, dependency-free command-line tools for auditors: payment tracing, sampling, Benford and duplicate/gap tests."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["audit", "accounting", "bank-reconciliation", "benford", "sampling"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Intended Audience :: Financial and Insurance Industry",
+]
+
+[project.scripts]
+auditkit = "auditkit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
